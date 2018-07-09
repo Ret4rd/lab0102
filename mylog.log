@@ -60,3 +60,4 @@
 "time": "2018-07-09 17:19:51,054", "levelname": "INFO", "message": "CoefficientsOfX: [[10.0, 24.0], [47.0, 55.0]], freeCoefficients: [374.0, 64.0], result: [-32.93079585  29.30449827]"
 "time": "2018-07-09 17:23:28,761", "levelname": "INFO", "message": "CoefficientsOfX: [[10.0, 2.0], [47.0, 5.0]], freeCoefficients: [34.0, 64.0], result: [-0.95454545 21.77272727]"
 "time": "2018-07-09 17:27:47,255", "levelname": "INFO", "message": "CoefficientsOfX: [[10.0, 2.0], [4.0, 5.0]], freeCoefficients: [34.0, 64.0], result: [ 1. 12.]"
+"time": "2018-07-09 19:18:19,890", "levelname": "INFO", "message": "CoefficientsOfX: [[10.0, 2.0], [4.0, 5.0]], freeCoefficients: [34.0, 64.0], result: [ 1. 12.]"

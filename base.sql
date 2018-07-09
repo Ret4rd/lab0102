@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 09 2018 г., 16:42
+-- Время создания: Июл 09 2018 г., 18:35
 -- Версия сервера: 10.1.33-MariaDB
 -- Версия PHP: 7.2.6
 
@@ -34,10 +34,18 @@ FROM model as ml
 WHERE ml.id = _id$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `set_lab0201decision` (IN `SLAU` VARCHAR(128) CHARSET utf8, IN `Result` VARCHAR(128) CHARSET utf8)  NO SQL
-INSERT INTO lab0201decision(`SLAU`, `Result`) Values(Slau, Result)$$
+BEGIN
+SET FOREIGN_KEY_CHECKS=0; 
+INSERT INTO lab0201decision(`SLAU`, `Result`) Values(Slau, Result);
+SET FOREIGN_KEY_CHECKS=1;
+END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `set_lab0201Log` (IN `Log` LONGTEXT CHARSET utf8, IN `time` DATETIME)  NO SQL
-INSERT INTO lab0201log(`Log`, `time`) Values(Log, time)$$
+BEGIN
+SET FOREIGN_KEY_CHECKS=0; 
+INSERT INTO lab0201log(`Log`, `time`) Values(Log, time);
+SET FOREIGN_KEY_CHECKS=1;
+END$$
 
 DELIMITER ;
 
@@ -106,13 +114,13 @@ ALTER TABLE `lab0201log`
 -- AUTO_INCREMENT для таблицы `lab0201decision`
 --
 ALTER TABLE `lab0201decision`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT для таблицы `lab0201log`
 --
 ALTER TABLE `lab0201log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
