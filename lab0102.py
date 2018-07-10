@@ -14,11 +14,11 @@ matB = []
 
 def errorLog(strLog, Slau, res, time):
     try:
-        DataBase.callFunction('set_lab0201Log', strLog, time)
         if ((Slau !=0) and (res!=0)):
             DataBase.callFunction('set_lab0201decision', Slau, res)
     except Exception as error:
         print(str(error))
+    DataBase.callFunction('set_lab0201Log', strLog, time, Slau)
 
 
 from threading import Lock
